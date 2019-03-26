@@ -14,12 +14,6 @@
 \usepackage{amssymb}
 \usepackage{physics}
 \usepackage{indentfirst}
-\usepackage[newfloat]{minted}
-
-%Configuring the code environment
-\newminted{python}{frame=lines,framerule=2pt}
-\newenvironment{code}{\captionsetup{type=listing}}{}
-\SetupFloatingEnvironment{listing}{name=Código}
 
 \renewcommand{\ABNTEXchapterfont}{\fontfamily{cmr}\fontseries{b}\selectfont}
 %%\renewcommand{\ABNTEXchapterfontsize}{\LARGE}
@@ -79,10 +73,12 @@
 
 \chapter{Parte I}
 
+As medidas obtidas são exibidas nas tabelas \ref{tab:uv} e \ref{tab:h'h} abaixo
+
 \begin{table}[H]
 \centering
-\caption{My caption}
-\label{my-label2}
+\caption{Dados obtidos para a distância $u$ entre a lente e o objeto e a distância $v$ entre a lente e a imagem. Os inversos $u^{⁻1}$ e $v^{-1}$ também são mostrados para uma melhor análise. A magnificação M obtida pelas medidas é mo}
+\label{tab:uv}
 \begin{tabular}{|c|c|c|c|c|}
 \hline
 $u$ (cm) & $u^{-1}$ (m$^{-1}$) & $v$ (cm) & $v^{-1}$ (m$^{-1}$) & $M_{(u/v)}$ \\ \hline
@@ -100,7 +96,7 @@ $u$ (cm) & $u^{-1}$ (m$^{-1}$) & $v$ (cm) & $v^{-1}$ (m$^{-1}$) & $M_{(u/v)}$ \\
 \begin{table}[H]
 \centering
 \caption{My caption}
-\label{my-label}
+\label{tab:h'h}
 \begin{tabular}{|c|c|}
 \hline
 $h'$ (cm) & $M_{(h'/h)}$ \\ \hline
@@ -122,12 +118,25 @@ $h'$ (cm) & $M_{(h'/h)}$ \\ \hline
     \label{fig:my_label}
 \end{figure}
 
+Assim, o resultado experimental para o foco $f$ é
+\begin{equation*}
+	f_E=\frac{1}{B}=(10,468 \pm 0,003)\text{ cm}
+\end{equation*}
+
+E o erro relativo $E_f$ do foco
+$$E_f=\frac{|f_T-f_E|}{f_T}=4,68\%$$
+
+
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.7]{Figuras/magni.png}
     \caption{Caption}
     \label{fig:my_label2}
 \end{figure}
+
+O erro relativo para a as magnificações é
+
+$$E_M=\frac{|1-A|}{1}=1\%$$
 
 \chapter{Parte II}
 
